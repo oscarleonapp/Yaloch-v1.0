@@ -19,6 +19,25 @@
     <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
   </head>
   <body>
+    <style>
+      img {
+  max-width: 100%; /* Evita que la imagen sea más grande que su contenedor */
+  height: auto;    /* Mantiene la proporción de la imagen */
+  display: block;  /* Elimina el espacio debajo de la imagen */
+}
+
+.col-md-7 {
+  text-align: center; /* Centra el contenido en pantallas más pequeñas */
+}
+
+@media (max-width: 768px) { /* Para pantallas pequeñas */
+  .rellax img {
+    width: 100%;       /* La imagen toma todo el ancho del contenedor */
+    height: auto;      /* Escala automáticamente */
+  }
+}
+
+    </style>
     <main class="page-wrapper">
       <!-- Navbar -->
       <!-- Remove "fixed-top" class to make navigation bar scrollable with the page -->
@@ -274,29 +293,13 @@
     <!-- CONOCE LA ESTACION -->
     <section class="container pt-3 pt-md-4 pt-lg-5 pb-2 mt-lg-2 mt-xl-4">
       <div class="row align-items-center">
-        <div class="rellax col-md-7" data-rellax-percentage="0.5" data-rellax-speed="-0.6" data-disable-parallax-down="lg" style="transform: translate3d(8px, -4px, 0px);">
-          <!-- <img src="assets/img/yaloch/estacion-yaloch.png" class="d-block mx-auto" width="746" alt="Image"> -->
-          <!-- <video src="assets/img/yaloch/about.mp4" class="d-block mx-auto" width="746" controls muted></video> -->
-          <video class="lazy d-block mx-auto" width="746" muted controls>
-            <source data-src="assets/img/yaloch/about.mp4" type="video/mp4">
-            Tu navegador no soporta videos.
-          </video>
-          <script>
-            document.addEventListener("DOMContentLoaded", function () {
-              const lazyVideos = document.querySelectorAll("video.lazy");
-              
-              lazyVideos.forEach(video => {
-                const source = video.querySelector("source");
-                source.src = source.dataset.src;
-          
-                video.load();
-                video.classList.remove("lazy");
-              });
-            });
-          </script>          
+        <!-- Columna de la imagen -->
+        <div class="col-md-6 text-center">
+          <img src="assets/img/yaloch/estacion-yaloch.png" class="img-fluid" alt="Estación Biológica YALOCH">
         </div>
-        <div class="rellax col-md-5 col-xl-4 offset-xl-1 d-flex d-sm-block flex-column" data-rellax-percentage="0.5" data-rellax-speed="0.8" data-disable-parallax-down="lg" style="transform: translate3d(18px, 7px, 0px);">
-          <h2 class="pb-3 pt-2 pt-md-0">Estación Biológica YALOCH</h2>
+        <!-- Columna del contenido -->
+        <div class="col-md-6">
+          <h2 class="pb-3 pt-2 pt-md-0">Estación Biológica <br> <strong>YALOCH</strong></h2>
           <ul class="list-unstyled pb-2">
             <li class="d-flex align-items-center pb-1 mb-2">
               <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
@@ -316,16 +319,13 @@
             </li>
             <li class="d-flex align-items-center pb-1 mb-2">
               <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
-              Acceso a laboratorios y zonas de estudio para proyectos de investigación. 
+              Acceso a laboratorios y zonas de estudio para proyectos de investigación.
             </li>
           </ul>
-          <!-- <a href="#" class="btn btn-primary">
-            Reservar un tour
-            <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
-          </a> -->
         </div>
       </div>
     </section>
+    
 
     <section class="container pb-2 pb-md-4 pb-lg-5 mb-3">
       <h1 class="pb-4"></h1>
