@@ -109,7 +109,7 @@
         
         <div id="jarallax-container-0" class="jarallax-container" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; z-index: -100;">
           <video class="jarallax-img w-100" autoplay muted loop playsinline style="background-size: cover; background-position: center; position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; pointer-events: none; transform-style: preserve-3d; backface-visibility: hidden; object-fit: cover;">
-          <source src="assets/img/yaloch/0225.mp4" type="video/mp4">
+          <source src="assets/img/yaloch/portada.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -275,7 +275,24 @@
       <div class="row align-items-center">
         <div class="rellax col-md-7" data-rellax-percentage="0.5" data-rellax-speed="-0.6" data-disable-parallax-down="lg" style="transform: translate3d(8px, -4px, 0px);">
           <!-- <img src="assets/img/yaloch/estacion-yaloch.png" class="d-block mx-auto" width="746" alt="Image"> -->
-          <video src="assets/img/yaloch/descripcion.mp4" class="d-block mx-auto" width="746" controls muted></video>
+          <!-- <video src="assets/img/yaloch/about.mp4" class="d-block mx-auto" width="746" controls muted></video> -->
+          <video class="lazy d-block mx-auto" width="746" muted controls>
+            <source data-src="assets/img/yaloch/about.mp4" type="video/mp4">
+            Tu navegador no soporta videos.
+          </video>
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const lazyVideos = document.querySelectorAll("video.lazy");
+              
+              lazyVideos.forEach(video => {
+                const source = video.querySelector("source");
+                source.src = source.dataset.src;
+          
+                video.load();
+                video.classList.remove("lazy");
+              });
+            });
+          </script>          
         </div>
         <div class="rellax col-md-5 col-xl-4 offset-xl-1 d-flex d-sm-block flex-column" data-rellax-percentage="0.5" data-rellax-speed="0.8" data-disable-parallax-down="lg" style="transform: translate3d(18px, 7px, 0px);">
           <h2 class="pb-3 pt-2 pt-md-0">Estación Biológica YALOCH</h2>
