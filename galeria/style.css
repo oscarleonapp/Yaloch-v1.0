@@ -1,0 +1,319 @@
+/*-------------------------*/
+/*         GENERALES       */
+/*-------------------------*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #000000;
+	font-family: 'Open Sans', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	width: 90%;
+	max-width: 800px;
+	margin: auto;
+}
+
+/*-------------------------*/
+/*          HEADER         */
+/*-------------------------*/
+
+header {
+	padding: 48px 0;
+}
+
+/*---------- Logo ---------*/
+
+header .logo {
+	text-align: center;
+	margin-bottom: 40px;
+	color: #FFF;
+}
+
+header .logo span {
+	color: #ffffff;
+	display: block;
+	letter-spacing: 0.8px;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+/*--- Barra de Búsqueda ---*/
+
+header form {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+header .search-bar {
+	background: #FFF;
+	border: 1px solid rgba(155,155,155,0.3);
+	border-radius: 100px;
+	font-size: 16px;
+	height: 40px;
+	text-align: center;
+	width: 20%;
+	line-height: 40px;
+	padding: 0 20px;
+}
+
+/*------- Categorías ------*/
+
+header .categories {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+header .categories a {
+	color: #ffffff;
+	font-size: 16px;
+	font-weight: 700;
+	margin: 10px 18px;
+}
+
+header .categories a.active {
+	color: #c5f991;
+}
+
+/*-------------------------*/
+/*           GRID          */
+/*-------------------------*/
+
+.grid {
+	position: relative;
+	opacity: 0;
+	transition: opacity 0.5s linear 1s;
+	width: 100%;
+}
+
+.grid.loaded-images {
+	opacity: 1;
+}
+
+.grid .item {
+	position: absolute;
+	display: block;
+	margin: 10px;
+	padding: 0;
+	width: calc(33.33% - 20px);
+}
+
+.grid .item-content {
+	position: relative;
+}
+
+.grid .item img {
+	border: 1px solid rgba(155,155,155,0.15);
+	border-radius: 10px;
+	cursor: pointer;
+	vertical-align: top;
+	width: 100%;
+}
+
+/*-------------------------*/
+/*         OVERLAY         */
+/*-------------------------*/
+
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,.9);
+	width: 100%;
+	height: 100vh;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.overlay.active {
+	display: flex;
+}
+
+.overlay img {
+	max-width: 500px;
+	min-width: 320px;
+}
+
+.overlay .description {
+	display: block;
+	background: #FFF;
+	border-radius: 10px;
+	margin-top: 5px;
+	padding: 20px;
+	text-align: center;
+	max-width: 50%
+}
+
+.container-img {
+	position: relative;
+}
+
+.overlay #btn-close-popup {
+	background: none;
+	border: none;
+	color: #FFF;
+	cursor: pointer;
+	font-size: 20px;
+	position: absolute;
+	right: -20px;
+	top: -20px;
+}
+
+/*-------------------------*/
+/*          FOOTER         */
+/*-------------------------*/
+
+footer .social-nets {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	padding: 20px;
+	flex-wrap: wrap;
+}
+
+/*--------- Íconos --------*/
+
+footer .social-nets a {
+	display: block;
+	width: 60px;
+	height: 60px;
+	background: #000;
+	color: #FFF;
+	margin: 20px;
+	text-align: center;
+	border-radius: 100px;
+	transition: .3s ease all;
+	font-size: 20px;
+	line-height: 60px;
+}
+
+footer .social-nets .facebook {background: #3B5998;}
+footer .social-nets .instagram {background: #C13584;}
+footer .social-nets .codepen {background: #131418;}
+footer .social-nets .youtube {background: #FF0000;}
+footer .social-nets .twitter {background: #1DA1F2;}
+footer .social-nets .deviantart {background: #292B2C; color: #05CC47;}
+
+/*---- Animación Íconos ---*/
+
+footer .icon-container:hover a {
+	animation: icon .5s ease;
+}
+
+@keyframes icon {
+	from {
+		transform: rotate3d(0,0,0,0);
+	}
+	to {
+		transform: rotate3d(0,1,0, 360deg);
+	}
+}
+
+/*----- Pie de Página -----*/
+
+footer .created-by {
+	color: #8A8A8C;
+	font-size: 14px;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+footer .created-by a {
+	color: #ffffff;
+}
+
+footer .created-by a:hover {
+	color: #FF8000;
+}
+
+/*-------------------------*/
+/*      MEDIA QUERIES      */
+/*-------------------------*/
+
+@media screen and (max-width: 700px) {
+	.grid .item {
+		width: calc(50% - 20px);
+	}
+
+	header {
+		padding: 28px 0;
+	}
+
+	header .logo {
+		margin-bottom: 30px;
+	}
+
+	header .logo h1 {
+		font-size: 30px;
+	}
+
+	header .search-bar {
+		width: 100%;
+	}
+
+	.overlay .description {
+		padding: 10px;
+		max-width: 90%
+	}
+
+	.overlay #btn-close-popup {
+		background: rgba(0,0,0,.5);
+		border-radius: 10px;
+		padding: 5px 10px;
+		right: 10px;
+		top: 10px;
+	}
+
+	footer .social-nets {
+		padding: 20px 0px;
+	}
+
+	footer .social-nets a {
+		width: 60px;
+		height: 60px;
+		margin: 13px;
+		font-size: 20px;
+		line-height: 60px;
+	}
+
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1650px) {
+	.container {
+		max-width: 1500px;
+	}
+
+	.grid .item {
+		width: calc(25% - 20px);
+	}
+
+	header .search-bar {
+		width: 50%;
+	}
+}
+
+@media screen and (min-width: 1651px) {
+	.container {
+		max-width: 1600px;
+	}
+
+	.grid .item {
+		width: calc(20% - 20px);
+	}
+}

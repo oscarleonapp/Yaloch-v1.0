@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Galeria Yaloch</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Bienvenidos a mi Primer Ejercicio de Desarrollo Web, en el que elegí como temática un Portafolio de Retrato con algunas Fotografías del Curso de Fotografía de Retrato en el Cecati 108.">
+  <title>Portafolio de Retrato | Ramón R. O.</title>  
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <div class="container">
+
+		<header>
+
+			<!-- Logo -->
+
+			<div class="logo">
+				<img src="../assets/favicon/favicon180x180.png" alt="" width="128px">
+				<h1>Galería <br> Estación Biológica Yaloch<span><i class="fas fa-camera" style="margin-top: 12px;"></i> Galería</span></h1>
+			</div>
+
+			<!-- Barra de Búsqueda -->
+
+			<form action="">
+				<input type="text" class="search-bar" id="search-bar" placeholder="Buscar">
+			</form>
+
+
+			<div class="categories" id="categories">
+
+				<a href="#" class="active">Todas</a>
+				<a href="#">Fauna</a>
+				<a href="#">Flora</a>
+				<a href="#">Experiencias</a>
+
+
+			</div>
+			
+		</header>
+
+		<section class="grid" id="grid">
+
+			<div class="item" 
+				data-categoria="fauna" 
+				data-etiquetas="gecko fauna" 
+				data-descripcion="Gecko Niño Dormido, Estación Yaloch Petén"
+			>
+				<div class="item-content">
+					<img src="src/nino-dormido.jpg" alt="Gecko Niño Dormido, Estación Yaloch Petén" title="Gecko Niño Dormido, Estación Yaloch Petén">
+				</div>
+			</div>
+
+			<div class="item" 
+			data-categoria="flora" 
+			data-etiquetas="flora orquidea" 
+			data-descripcion="Orquidea, Estación Yaloch Petén"
+		>
+			<div class="item-content">
+				<img src="src/orquidea.jpg" alt="Gecko Niño Dormido, Estación Yaloch Petén" title="Gecko Niño Dormido, Estación Yaloch Petén">
+			</div>
+		</div>
+
+		<div class="item" 
+		data-categoria="experiencias" 
+		data-etiquetas="experiencias estrellas" 
+		data-descripcion="Orquidea, Estación Yaloch Petén"
+	>
+		<div class="item-content">
+			<img src="src/experiencia1.jpg" alt="Gecko Niño Dormido, Estación Yaloch Petén" title="Gecko Niño Dormido, Estación Yaloch Petén">
+		</div>
+	</div>
+
+			
+		</section>
+
+		<section class="overlay" id="overlay">
+
+			<div class="container-img">
+
+				<button id="btn-close-popup">
+					<i class="fas fa-times"></i>
+				</button>
+
+				<img src="" alt="">
+				
+			</div>
+
+			<p class="description"></p>
+			
+		</section>
+    
+    <footer class="container">
+
+			<div class="created-by">
+				<p><a href="https://yaloch.com/" target="_blank" title="Yaloch Página Web">Todos los Derechos Reservados Yaloch.com <br><a href="https://oscarleon.app/" target="_blank">Diseño, Desarrollo Web y SEO: OSCARLEON</a></p>
+			</div>
+			
+		</footer>
+    
+  </div>
+  
+  <script src="https://unpkg.com/web-animations-js@2.3.2/web-animations.min.js"></script>
+	<script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/js/all.js"></script>
+  
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
