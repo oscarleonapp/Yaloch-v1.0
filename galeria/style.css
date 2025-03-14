@@ -167,6 +167,7 @@ header .categories a.active {
     max-height: 80vh;
     object-fit: contain;
     display: none; /* Ocultamos el video por defecto */
+    margin: auto;
 }
 
 
