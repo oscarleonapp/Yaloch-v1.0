@@ -122,6 +122,15 @@ header .categories a.active {
     width: 100%;
 }
 
+.grid .item video {
+    border: 1px solid rgba(155,155,155,0.15);
+    border-radius: 10px;
+    cursor: pointer;
+    vertical-align: top;
+    width: 100%;
+}
+
+
 /*-------------------------*/
 /*         OVERLAY         */
 /*-------------------------*/
@@ -152,6 +161,14 @@ header .categories a.active {
     display: block;
     margin: auto;
 }
+
+.overlay video {
+    max-width: 90%;
+    max-height: 80vh;
+    object-fit: contain;
+    display: none; /* Ocultamos el video por defecto */
+}
+
 
 
 .overlay .description {
